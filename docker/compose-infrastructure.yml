@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+
+  application:
+    build: .
+    image: application
+    restart: on-failure
+    environment:
+      LOG_APP_LEVEL: "DEBUG"
+    ports:
+      - "9080:9090"
